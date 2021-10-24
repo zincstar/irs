@@ -1,3 +1,6 @@
+#include<windows.h>
+//for debug on windows
+
 class Temperature_humidity_sensor
 {
     public:
@@ -23,4 +26,16 @@ void setup()
 void loop()
 {
 
+}
+
+//To test the software part without the hardware, we use a main() to leverage setup() and loop()
+int main()
+{
+    setup();
+    while (1)
+    {
+        loop();
+        Sleep(500);
+    }
+    return 0;
 }
